@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.mainBody {
+    position:relative;
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin-left:auto;
+    margin-right:auto;
+}
+.rowOne {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left:-100px;
+    margin-right: 200px;
+}
+
+
+.imageOne{
+    height:300px;
+    margin-right:20px;
+}
+.productTitle{
+  margin-top:24px;
+  display:flex;
+  justify-content:space-around;
+}
+.productPrice{
+    float:right;
+}
