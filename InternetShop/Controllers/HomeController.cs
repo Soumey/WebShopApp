@@ -191,12 +191,22 @@ namespace InternetShop.Controllers
             
         }
 
-
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public async Task<IActionResult> Delete(int id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var productDetails = await _productRepository.GetByIdAsync(id);
+            if (productDetails == null) return View("Error");
+            return View(productDetails);
+
         }
+        [HttpPost,ActionName("Delete")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var productDetails = await _productRepository.GetByIdAsync(id);
+            if (productDetails == null) return View("Error");
+            _productRepository.Delete(productDetails);
+            return RedirectToAction("Index");
+        }
+
+        
     }
 }

@@ -9,8 +9,8 @@
           <h1 class="jumbotron-heading">Internet Shop</h1>
           <p class="lead text-muted">Internet shop where you can find anything you would ever think might come in handy.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a asp-controller="Home" asp-action="Create" type="button" class="btn btn-secondary my-2">Create new product</a>
+            
           </p>
         </div>
       </section>
@@ -31,6 +31,7 @@
                                 <div class="btn-group">
                                     <a asp-controller="Home" asp-action="Detail" asp-route-id="@item.Id" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                                     <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id"  type="button" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id" type="button" class="btn btn-sm btn-outline-secondary">Delete</a>
                                 </div>
                                 <small class="text-muted">@item.ProductPrice $</small>
                             </div>

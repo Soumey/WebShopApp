@@ -1,12 +1,13 @@
 ﻿//using Microsoft.AspNetCore.Identity;
 //using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
 
 //namespace InternetShop.Models
 //{
-//    public class AppUser 
+//    public class AppUser : IdentityUser
 //    {
-//        [Key]
-//        public int id;
+//        [ForeignKey("Cart")]
+//        public int Id { get; set; }
 //        public ICollection<Cart> Carts { get; set; }
 //    }
 //}
